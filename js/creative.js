@@ -47,6 +47,90 @@
   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
   });
 
+  var imagenes1=new Array(
+    'img/portfolio/1.jpg',
+    'img/portfolio/2.jpg',
+    'img/portfolio/3.jpg',
+    'img/portfolio/4.jpg',
+    'img/portfolio/5.jpg',
+    'img/portfolio/6.jpg'
+  );
+
+  var imagenes2=new Array(
+    'img/portfolio/1.jpg',
+    'img/portfolio/2.jpg',
+    'img/portfolio/3.jpg',
+    'img/portfolio/4.jpg',
+    'img/portfolio/5.jpg',
+    'img/portfolio/6.jpg'
+  );
+  var imagenes3=new Array(
+    'img/portfolio/1.jpg',
+    'img/portfolio/2.jpg',
+    'img/portfolio/3.jpg',
+    'img/portfolio/4.jpg',
+    'img/portfolio/5.jpg',
+    'img/portfolio/6.jpg'
+  );
+  var imagenes4=new Array(
+    'img/portfolio/1.jpg',
+    'img/portfolio/2.jpg',
+    'img/portfolio/3.jpg',
+    'img/portfolio/4.jpg',
+    'img/portfolio/5.jpg',
+    'img/portfolio/6.jpg'
+  );
+  var imagenes5=new Array(
+    'img/portfolio/1.jpg',
+    'img/portfolio/2.jpg',
+    'img/portfolio/3.jpg',
+    'img/portfolio/4.jpg',
+    'img/portfolio/5.jpg',
+    'img/portfolio/6.jpg'
+  );
+  var imagenes6=new Array(
+    'img/portfolio/1.jpg',
+    'img/portfolio/2.jpg',
+    'img/portfolio/3.jpg',
+    'img/portfolio/4.jpg',
+    'img/portfolio/5.jpg',
+    'img/portfolio/6.jpg'
+  );
+  var index = 0;
+ 
+    /**
+    * Funcion para cambiar la imagen
+    */
+    function rotarImagenes()
+    {
+
+      if(index == 5){
+        index = 0;
+      }else{
+        index = index+1;
+      };
+      // cambiamos la imagen
+      document.getElementById("imageresource1").src=imagenes1[index];
+      document.getElementById("imageresource2").src=imagenes2[index];
+      document.getElementById("imageresource3").src=imagenes3[index];
+      document.getElementById("imageresource4").src=imagenes4[index];
+      document.getElementById("imageresource5").src=imagenes5[index];
+      document.getElementById("imageresource6").src=imagenes6[index];
+    }
+ 
+    /**
+    * Función que se ejecuta una vez cargada la página
+    */
+    onload=function()
+    {
+        // Cargamos una imagen aleatoria
+        rotarImagenes();
+
+ 
+        // Indicamos que cada 5 segundos cambie la imagen
+        setInterval(rotarImagenes,5000);
+    }
+
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
