@@ -101,7 +101,7 @@
     /**
     * Funcion para cambiar la imagen
     */
-    function rotarImagenes()
+    function rotarImagenes1()
     {
 
       if(index == 5){
@@ -111,10 +111,24 @@
       };
       // cambiamos la imagen
       document.getElementById("imageresource1").src=imagenes1[index];
-      document.getElementById("imageresource2").src=imagenes2[index];
-      document.getElementById("imageresource3").src=imagenes3[index];
       document.getElementById("imageresource4").src=imagenes4[index];
+    }
+
+     function rotarImagenes2()
+    {
+
+      // cambiamos la imagen
+
+      document.getElementById("imageresource2").src=imagenes2[index];
       document.getElementById("imageresource5").src=imagenes5[index];
+ 
+    }
+
+     function rotarImagenes3()
+    {
+
+      // cambiamos la imagen
+      document.getElementById("imageresource3").src=imagenes3[index];
       document.getElementById("imageresource6").src=imagenes6[index];
     }
  
@@ -124,11 +138,15 @@
     onload=function()
     {
         // Cargamos una imagen aleatoria
-        rotarImagenes();
+        rotarImagenes1();
+        rotarImagenes2();
+        rotarImagenes3();
 
  
         // Indicamos que cada 5 segundos cambie la imagen
-        setInterval(rotarImagenes,5000);
+        setInterval(rotarImagenes1,5000);
+        setInterval(rotarImagenes2,5100);
+        setInterval(rotarImagenes3,5200);
     }
 
     // Initialize WOW.js Scrolling Animations
